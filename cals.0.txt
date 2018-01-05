@@ -1,0 +1,14 @@
+from Tkinter import*
+
+R= Tk()
+v=StringVar()
+def calc():
+    p=eval(v.get())
+    E.delete(0, END)
+    E.insert(0, str(p))
+E=Entry(R, textvariable=v, bd=10)
+E.pack()
+B=Button(R, text="                    =                    ",command=calc)
+B.pack(side=BOTTOM)
+R.mainloop()
+
